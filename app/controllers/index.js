@@ -33,7 +33,12 @@ export default Ember.ArrayController.extend({
     var ppu = this.get('pricePerUnit');
     var industryA = this.get('industryA') * ppu.industryA;
     var industryB = this.get('industryB') * ppu.industryB;
-    return industryA + industryB;
+    
+    if (isNaN(industryA)) industryA = 0;
+    if (isNaN(industryB)) industryB = 0;
+    
+    var total = industryA + industryB;
+    return total;
   }.property('@each.industry', 'industryA', 'industryB', 'pricePerUnit')
   
 });
