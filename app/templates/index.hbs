@@ -1,0 +1,21 @@
+<h3>Societal Benefit: {{societalBenefit}}</h3>
+
+<h4>Industry A</h4>
+
+<ul>
+  <li>Resources Sold: {{industryA}}</li>
+  <li>Price Per Unit: {{pricePerUnit.industryA}}</li>
+</ul>
+
+<h4>Industry B</h4>
+
+<ul>
+  <li>Resources Sold: {{industryB}}</li>
+  <li>Price Per Unit: {{pricePerUnit.industryB}}</li>
+</ul>
+
+<h4>No Industry</h4>
+
+{{#each}}
+  {{resource-control industry=industry}}
+{{/each}}
