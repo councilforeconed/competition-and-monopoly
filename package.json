@@ -15,7 +15,8 @@
     "start": "grunt server",
     "build": "grunt build:debug",
     "test": "grunt test:ci",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "deploy": "grunt dist && scp -r dist/* cee:~/technology/competition"
   },
   "author": "",
   "license": "MIT",
