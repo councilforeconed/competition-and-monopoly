@@ -1,0 +1,57 @@
+@import 'colors';
+
+$resource-width: 150px;
+$resource-height: 65px;
+$header-height: 40px;
+$industry-selector-width: 35px;
+$industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
+
+.resource {
+  display: inline-block;
+  height: $resource-height;
+  margin: 1rem;
+  position: relative;
+  width: $resource-width;
+}
+
+.resource a {
+  text-decoration: none;
+}
+
+.industry-selection {
+  background-color: $pale;
+  margin: 0 0 10px 0;
+  text-align: center;
+  line-height: $header-height;
+}
+
+.industry-selectors {
+
+}
+
+.industry-selector {
+  color: white;
+  position: absolute;
+  top: $header-height;
+  text-align: center;
+  line-height: 25px;
+}
+
+.industry-selector-a {
+  background-color: $cobalt;
+  left: 0px;
+  width: 35px;
+}
+
+.industry-selector-b {
+  background-color: $red;
+  left: 115px;
+  width: 35px;
+}
+
+.industry-selector-none {
+  background-color: #EEE;
+  color: #AAA;
+  width: 80px;
+  left: 35px;
+}

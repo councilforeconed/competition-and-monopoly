@@ -1,9 +1,6 @@
-<h4>Resource</h4>
-
-<p>Industry: {{industryName}}</p>
-
-<ul>
-  <li><a href="#" {{action 'changeIndustry' 1}}>Industry A</a></li>
-  <li><a href="#" {{action 'changeIndustry' 0}}>No Industry</a></li>
-  <li><a href="#" {{action 'changeIndustry' 2}}>Industry B</a></li>
-</ul>
+<h3 class="industry-selection">{{industryName}}</h3>
+<div class="industry-selectors">
+  <a href="#" {{action 'changeIndustry' 1}} class="industry-selector industry-selector-a">A</a>
+  <a href="#" {{action 'changeIndustry' 0}} class="industry-selector industry-selector-none">None</a>
+  <a href="#" {{action 'changeIndustry' 2}} class="industry-selector industry-selector-b">B</a>
+</div>
