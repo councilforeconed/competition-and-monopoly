@@ -9,9 +9,16 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 .resource {
   display: inline-block;
   height: $resource-height;
-  margin: 1rem;
   position: relative;
   width: $resource-width;
+  margin: 0 31px 1.5rem 0;
+  background: $pale;
+  border: 5px solid darken($pale, 10);
+  -moz-box-shadow: 2px 2px 4px 0px darken($pale, 70), inset 1px 1px 3px 0px darken($pale, 70);
+  box-shadow: 2px 2px 4px 0px darken($pale, 70), inset 1px 1px 3px 0px darken($pale, 70);
+  &:nth-child(4n+2) {
+    margin: 0 0 1.5rem 0;
+  }
 }
 
 .resource a {
@@ -50,8 +57,8 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 }
 
 .industry-selector-none {
-  background-color: #EEE;
-  color: #AAA;
+  background-color: $pale;
+  color: darken($pale, 50);
   width: 80px;
   left: 35px;
 }
