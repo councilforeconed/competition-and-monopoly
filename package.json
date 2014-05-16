@@ -50,5 +50,8 @@
     "loom-generators-ember-appkit": "~1.0.5",
     "originate": "~0.1.5",
     "request": "~2.33.0"
+  },
+  "dependencies": {
+    "grunt-contrib-sass": "^0.7.3"
   }
 }
