@@ -14,6 +14,7 @@
     "ember-load-initializers": "git://github.com/stefanpenner/ember-load-initializers.git#0.0.1",
     "jquery-ui": "~1.10.4",
     "normalize.css": "~3.0.1",
-    "numeral": "~1.5.3"
+    "numeral": "~1.5.3",
+    "d3": "~3.4.7"
   }
 }

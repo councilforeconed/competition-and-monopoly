@@ -1,22 +1,29 @@
-<h3>Societal Benefit: {{societalBenefit}}</h3>
+<h3>Societal Benefit: {{format-currency societalBenefit}}</h3>
 
-{{supply-demand-grid}}
+{{supply-demand-grid industryA=industryA industryB=industryB}}
 
-<h4>Industry A</h4>
-
-<ul>
-  <li>Resources Sold: {{industryA}}</li>
-  <li>Price Per Unit: {{pricePerUnit.industryA}}</li>
-</ul>
-
-<h4>Industry B</h4>
-
-<ul>
-  <li>Resources Sold: {{industryB}}</li>
-  <li>Price Per Unit: {{pricePerUnit.industryB}}</li>
-</ul>
-
-<h4>No Industry</h4>
+<div class="industry-overview">
+  <div class="industry-panel">  
+    <h4>Industry A</h4>
+    <ul>
+      <li>Resources Sold: {{industryA}}</li>
+      <li>Price Per Unit: {{format-currency pricePerUnit.industryA}}</li>
+    </ul>
+  </div>
+  <div class="industry-panel">
+    <h4>No Industry</h4>
+    <ul>
+      <li>Not Sold to Either Industry: {{noIndustry}}</li>
+    </ul>
+  </div>
+  <div class="industry-panel">  
+    <h4>Industry B</h4>
+    <ul>
+      <li>Resources Sold: {{industryB}}</li>
+      <li>Price Per Unit: {{format-currency pricePerUnit.industryB}}</ui>
+    </ul>
+  </div>
+</div>
 
 {{#each}}
   {{resource-control industry=industry}}

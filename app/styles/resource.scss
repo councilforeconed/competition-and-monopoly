@@ -62,3 +62,21 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
   width: 80px;
   left: 35px;
 }
+
+@mixin selected-industry($color) {
+  border: 5px solid darken($color, 10);
+  & .industry-selection {
+    background-color: lighten($color, 30);
+  }
+  & .industry-selector-none {
+    background-color: lighten($color, 30);
+  }
+}
+
+.resource.industry-a {
+  @include selected-industry($cobalt);
+}
+
+.resource.industry-b {
+  @include selected-industry($red);
+}
