@@ -1,0 +1,19 @@
+.industry-overview{
+  position: relative;
+  width: 100.00%;
+}
+.industry-panel {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 1em;
+  margin-bottom: 2rem;
+  width: 33%;
+  float: left;
+  & ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  & li {
+    list-style-type: none;
+  }
+}

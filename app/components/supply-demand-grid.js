@@ -1,3 +1,5 @@
+/* globals d3 */ 
+
 export default Ember.Component.extend({
   
   classNames: ['supply-demand-grid'],
@@ -74,12 +76,12 @@ export default Ember.Component.extend({
     }
     
     this.get('A').transition().attr(a);
-    this.get('B').transition().attr(b)
+    this.get('B').transition().attr(b);
   }.observes('industryA', 'industryB'),
   
   translateResourcesSoldToGraphPosition: function (resourcesSold) {
     var point = this.get('points')[resourcesSold]; 
-    return { cx: point[0], cy: point[1] }
+    return { cx: point[0], cy: point[1] };
   }
   
 });

@@ -5,22 +5,5 @@
 @import 'container';
 @import 'fonts';
 @import 'resource';
-
-.supply-demand-grid svg {
-  margin: 0 auto;
-}
-
-.industry-overview{
-  position: relative;
-  width: 100.00%;
-}
-.industry-panel {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 1em;
-  width: 33%;
-  float: left;
-  & ul {
-    padding-left: 1rem;
-  }
-}
+@import 'supply-demand-grid';
+@import 'industry-overview';
