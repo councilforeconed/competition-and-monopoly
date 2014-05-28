@@ -2,7 +2,12 @@
 
 export default Ember.Component.extend({
 
-  classNames: ['supply-demand-grid'],
+  tagName: 'svg',
+  attributeBindings: ['viewBox'],
+
+  viewBox: '0 0 740 388',
+
+  classNames: ['supply-demand-grid', 'sixteen', 'columns'],
 
   points: [
     [ 35, 8],
@@ -32,7 +37,7 @@ export default Ember.Component.extend({
   lineFunction: d3.svg.line().x(function(d) { return d.x; }).y(function(d) { return d.y; }).interpolate('linear'),
 
   didInsertElement: function () {
-    var svg = d3.select(this.$('svg').get(0));
+    var svg = d3.select(this.$().get(0));
     this.set('svg', svg);
 
     var lineFunction = this.get('lineFunction');
