@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
-@import '../../vendor/normalize.css/normalize.css';
+@import '../../vendor/skeleton-sass/sass/skeleton';
 
 @import 'colors';
 @import 'container';
+@import 'header';
 @import 'fonts';
 @import 'resource';
 @import 'supply-demand-grid';

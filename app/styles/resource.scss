@@ -6,6 +6,10 @@ $header-height: 40px;
 $industry-selector-width: 35px;
 $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 
+.resources {
+  text-align: center;
+}
+
 .resource {
   display: inline-block;
   height: $resource-height;
@@ -14,10 +18,10 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
   margin: 0 31px 1.5rem 0;
   background: #FFF;
   border: 5px solid darken(#FFF, 10);
-  -moz-box-shadow: 2px 2px 4px 0px darken(#FFF, 70), inset 1px 1px 3px 0px darken(#FFF, 70);
-  box-shadow: 2px 2px 4px 0px darken(#FFF, 70), inset 1px 1px 3px 0px darken(#FFF, 70);
-  &:nth-child(4n+2) {
-    margin: 0 0 1.5rem 0;
+  -moz-box-shadow: 1px 1px 2px 0px darken(#FFF, 50), inset 1px 1px 3px 0px darken(#FFF, 70);
+  box-shadow: 1px 1px 2px 0px darken(#FFF, 50), inset 1px 1px 3px 0px darken(#FFF, 70);
+  &:hover {
+    border: 5px solid darken(#FFF, 15);
   }
 }
 
@@ -48,12 +52,18 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
   background-color: $cobalt;
   left: 0px;
   width: 35px;
+  &:hover {
+    background-color: darken($cobalt, 20);
+  }
 }
 
 .industry-selector-b {
   background-color: $red;
   left: 115px;
   width: 35px;
+  &:hover {
+    background-color: darken($red, 20);
+  }
 }
 
 .industry-selector-none {
@@ -61,6 +71,9 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
   color: darken(#FFF, 50);
   width: 80px;
   left: 35px;
+  &:hover {
+    background-color: darken(#FFF, 10);
+  }
 }
 
 @mixin selected-industry($color) {

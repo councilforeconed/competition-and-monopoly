@@ -3,7 +3,7 @@
 <p><strong>Societal Benefit</strong>: {{format-currency societalBenefit}}</p>
 
 <div class="industry-overview">
-  <div class="industry-panel">  
+  <div class="industry-panel">
     <h4>Industry A</h4>
     <ul>
       <li>Resources Sold: {{industryA}}</li>
@@ -16,7 +16,7 @@
       <li>Not Sold to Either Industry: {{noIndustry}}</li>
     </ul>
   </div>
-  <div class="industry-panel">  
+  <div class="industry-panel">
     <h4>Industry B</h4>
     <ul>
       <li>Resources Sold: {{industryB}}</li>
@@ -25,6 +25,8 @@
   </div>
 </div>
 
+<div class="resources">
 {{#each}}
   {{resource-control industry=industry}}
 {{/each}}
+</div>
