@@ -17,7 +17,7 @@
 10 error You can get their info via:
 10 error     npm owner ls competition
 10 error There is likely additional logging output above.
-11 error System Darwin 13.1.0
+11 error System Darwin 13.2.0
 12 error command "node" "/usr/local/bin/npm" "run" "deploy"
 13 error cwd /Users/skinney/Projects/competition
 14 error node -v v0.10.28

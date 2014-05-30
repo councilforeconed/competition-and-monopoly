@@ -1,6 +1,6 @@
 @import 'colors';
 
-$resource-width: 150px;
+$resource-width: 160px;
 $resource-height: 65px;
 $header-height: 40px;
 $industry-selector-width: 35px;
@@ -17,11 +17,9 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
   width: $resource-width;
   margin: 0 10px 1.5rem 10px;
   background: #FFF;
-  border: 5px solid darken(#FFF, 10);
-  -moz-box-shadow: 1px 1px 2px 0px darken(#FFF, 50), inset 1px 1px 3px 0px darken(#FFF, 70);
-  box-shadow: 1px 1px 2px 0px darken(#FFF, 50), inset 1px 1px 3px 0px darken(#FFF, 70);
+  border: 1px solid darken(#FFF, 10);
   &:hover {
-    border: 5px solid darken(#FFF, 15);
+    border: 1px solid darken(#FFF, 15);
   }
 }
 
@@ -51,7 +49,7 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 .industry-selector-a {
   background-color: $cobalt;
   left: 0px;
-  width: 35px;
+  width: $industry-selector-width;
   &:hover {
     background-color: darken($cobalt, 20);
   }
@@ -59,8 +57,8 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 
 .industry-selector-b {
   background-color: $red;
-  left: 115px;
-  width: 35px;
+  left: $resource-width - $industry-selector-width;
+  width: $industry-selector-width;
   &:hover {
     background-color: darken($red, 20);
   }
@@ -69,15 +67,15 @@ $industry-none-selector-width: $resource-width - ($industry-selector-width * 2);
 .industry-selector-none {
   background-color: #FFF;
   color: darken(#FFF, 50);
-  width: 80px;
-  left: 35px;
+  width: $industry-none-selector-width;
+  left: $industry-selector-width;
   &:hover {
     background-color: darken(#FFF, 10);
   }
 }
 
 @mixin selected-industry($color) {
-  border: 5px solid darken($color, 10);
+  border: 1px solid darken($color, 10);
   & .industry-selection {
     background-color: lighten($color, 30);
   }

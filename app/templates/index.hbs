@@ -1,28 +1,39 @@
 {{supply-demand-grid industryA=industryA industryB=industryB}}
 
-<div class="societal-benefit sixteen columns clearfix">
-  <strong>Societal Benefit</strong>: {{format-currency societalBenefit}}
+<div class="sixteen columns clearfix">
+  <div class="eight columns instructions">
+    <h3>Instructions</h3>
+    <p>The 14 resources below can be sold to either industry. Resource rots quickly so keeping it to sell later is not an option.</p>
+
+    <ul>
+      <li>Click <span class="industry-identifier a">1</span> to sell the resource to <strong>Industry 1</strong>.</li>
+      <li>Click <span class="industry-identifier b">2</span> to sell the resource to <strong>Industry 2</strong>.</li>
+      <li>Click <span class="industry-identifier none">None</span> to withhold the resource from the market.</li>
+    </ul>
+  </div>
+  <div class="eight columns">
+    <h3>How many resource owners are there?</h3>
+    {{resource-owners-selector resourceOwners=resourceOwners}}
+    {{#if isMonopoly}}
+    <p>The sole owner of all 14 resources was able to make <strong>{{format-currency societalBenefit}}</strong> by selling <strong>{{resource-count industryA}}</strong> to <strong>Industry 1</strong> and <strong>{{resource-count industryB}}</strong> to <strong>Industry 2</strong>. The sole owner decided not to sell <strong>{{resource-count noIndustry}}</strong>.</p>
+    {{else}}
+    <p>Of the 14 individual resource owners, <strong>{{industryA}}</strong> sold to <strong>Industry 1</strong> for <strong>{{format-currency pricePerUnit.industryA}}</strong> and <strong>{{industryB}}</strong> sold to <strong>Industry 2</strong> for <strong>{{format-currency pricePerUnit.industryB}}</strong>. {{resource-count noIndustry}} were not sold to either industry{{#if noIndustry}} and rotted{{/if}}.</p>
+    {{/if}}
+  </div>
 </div>
 
 <div class="industry-overview sixteen columns clearfix">
   <div class="industry-panel five columns">
-    <h4>Resources Sold to Industry A</h4>
-    <p class="amount">{{industryA}}</p>
+    <h4>{{resource-count industryA capitalize=true}} Sold to Industry 1</h4>
     <p class="price">@{{format-currency pricePerUnit.industryA}}/resource</p>
   </div>
   <div class="industry-panel six columns">
-    <h4>Resources Not Sold to Either Industry</h4>
-    <p class="amount">{{noIndustry}}</p>
+    <h4>{{resource-count noIndustry capitalize=true}} Not Sold to Either Industry</h4>
   </div>
   <div class="industry-panel five columns">
-    <h4>Resources Sold to Industry B</h4>
-    <p class="amount">{{industryB}}</p>
+    <h4>{{resource-count industryB capitalize=true}} Sold to Industry 2</h4>
     <p class="price">@{{format-currency pricePerUnit.industryB}}/resource</ui>
   </div>
-</div>
-
-<div class="sixteem columns instructions">
-  <p><strong>Instructions</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div class="resources sixteen columns">
