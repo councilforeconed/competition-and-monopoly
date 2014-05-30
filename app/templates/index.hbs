@@ -1,5 +1,25 @@
 {{supply-demand-grid industryA=industryA industryB=industryB}}
 
+<div class="industry-overview sixteen columns clearfix">
+  <div class="industry-panel five columns">
+    <h4>{{resource-count industryA capitalize=true}} Sold to Industry 1</h4>
+    <p class="price">@{{format-currency pricePerUnit.industryA}}/resource</p>
+  </div>
+  <div class="industry-panel six columns">
+    <h4>{{resource-count noIndustry capitalize=true}} Not Sold to Either Industry</h4>
+  </div>
+  <div class="industry-panel five columns">
+    <h4>{{resource-count industryB capitalize=true}} Sold to Industry 2</h4>
+    <p class="price">@{{format-currency pricePerUnit.industryB}}/resource</ui>
+  </div>
+</div>
+
+<div class="resources sixteen columns">
+{{#each}}
+  {{resource-control industry=industry}}
+{{/each}}
+</div>
+
 <div class="sixteen columns clearfix">
   <div class="eight columns instructions">
     <h3>Instructions</h3>
@@ -20,24 +40,4 @@
     <p>Of the 14 individual resource owners, <strong>{{industryA}}</strong> sold to <strong>Industry 1</strong> for <strong>{{format-currency pricePerUnit.industryA}}</strong> and <strong>{{industryB}}</strong> sold to <strong>Industry 2</strong> for <strong>{{format-currency pricePerUnit.industryB}}</strong>. {{resource-count noIndustry}} were not sold to either industry{{#if noIndustry}} and rotted{{/if}}.</p>
     {{/if}}
   </div>
-</div>
-
-<div class="industry-overview sixteen columns clearfix">
-  <div class="industry-panel five columns">
-    <h4>{{resource-count industryA capitalize=true}} Sold to Industry 1</h4>
-    <p class="price">@{{format-currency pricePerUnit.industryA}}/resource</p>
-  </div>
-  <div class="industry-panel six columns">
-    <h4>{{resource-count noIndustry capitalize=true}} Not Sold to Either Industry</h4>
-  </div>
-  <div class="industry-panel five columns">
-    <h4>{{resource-count industryB capitalize=true}} Sold to Industry 2</h4>
-    <p class="price">@{{format-currency pricePerUnit.industryB}}/resource</ui>
-  </div>
-</div>
-
-<div class="resources sixteen columns">
-{{#each}}
-  {{resource-control industry=industry}}
-{{/each}}
 </div>
